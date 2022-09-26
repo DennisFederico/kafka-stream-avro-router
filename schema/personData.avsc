@@ -1,0 +1,45 @@
+{
+    "type": "record",
+    "namespace": "com.dennis.domain",
+    "name": "PersonData",
+    "fields": [
+        {
+            "name": "PERSON_ID",
+            "type": "int"
+        },
+        {
+            "name": "Name",
+            "type": "string"
+        },
+        {
+            "name": "LastName",
+            "type": "string"
+        },
+        {
+            "name": "BirthYear",
+            "type": "int"
+        },
+        {
+            "name": "BirthYear2",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "Nationality",
+            "type": {
+                "type": "record",
+                "name": "NationalityRecord",
+                "fields": [
+                    {
+                        "name": "COUNTRY_ID",
+                        "type": "int"
+                    },
+                    {
+                        "name": "CountryName",
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    ]
+}

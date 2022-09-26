@@ -1,0 +1,12 @@
+applicationId: kstreams.router
+inputTopic: PersonWithBirthYear
+defaultRouteTopic: Person_Default
+tempStateDir: /tmp
+routes:
+  - topic: Person_GenX
+    lowerBound: 1965
+    upperBound: 1980
+  - topic: Person_Millennials
+    lowerBound: 1981
+    upperBound: 1996
+  
